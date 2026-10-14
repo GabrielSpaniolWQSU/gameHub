@@ -1,0 +1,20 @@
+<a routerLink="/jogos">← Voltar ao catálogo</a>
+@if (jogo; as item) {
+  <h1>{{ item.nome }}</h1>
+  <section class="detalhes">
+    <img [src]="item.imagem" [alt]="item.nome" (error)="imagemAlternativa($event)">
+    <div><p>{{ item.descricao }}</p><p><strong>ID:</strong> {{ item.id }}</p><p><strong>Categoria:</strong> {{ item.categoria }}</p>
+      @switch (item.categoria) {
+        @case ('Ação') { <p>Para quem gosta de partidas movimentadas.</p> }
+        @case ('Aventura') { <p>Para explorar mundos e descobrir histórias.</p> }
+        @case ('RPG') { <p>Para evoluir personagens e completar missões.</p> }
+        @case ('Esporte') { <p>Para competir e praticar suas habilidades.</p> }
+        @case ('Estratégia') { <p>Para planejar e tomar decisões.</p> }
+        @default { <p>Conheça um novo estilo de jogo.</p> }
+      }
+      <p><strong>Preço:</strong> @if (item.preco === 0) { Gratuito } @else { {{ item.preco | currency:'BRL':'symbol':'1.2-2':'pt-BR' }} }</p>
+      <p><strong>Avaliação:</strong> {{ item.avaliacao }}/5</p>
+      @if (item.disponivel) { <p class="status">Disponível</p> } @else { <p class="status indisponivel">Indisponível</p> }
+    </div>
+  </section>
+} @else { <h1>Jogo não encontrado</h1><p>O código informado não corresponde a um jogo cadastrado.</p> }

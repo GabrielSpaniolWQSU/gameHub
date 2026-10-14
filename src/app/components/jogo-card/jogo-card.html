@@ -1,0 +1,11 @@
+<article class="card">
+  <img [src]="jogo.imagem" [alt]="jogo.nome" (error)="imagemAlternativa($event)">
+  <div class="card-conteudo">
+    <small>{{ jogo.categoria }} · #{{ jogo.id }}</small>
+    <h3>{{ jogo.nome }}</h3>
+    <p>{{ jogo.descricao }}</p>
+    <p><strong>@if (jogo.preco === 0) { Gratuito } @else { {{ jogo.preco | currency:'BRL':'symbol':'1.2-2':'pt-BR' }} }</strong> · {{ jogo.avaliacao }}/5</p>
+    @if (jogo.disponivel) { <span class="status">Disponível</span> } @else { <span class="status indisponivel">Indisponível</span> }
+    <a class="botao" [routerLink]="['/jogos', jogo.id]">Ver detalhes</a>
+  </div>
+</article>

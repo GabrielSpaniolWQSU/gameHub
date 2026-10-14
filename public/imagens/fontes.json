@@ -1,0 +1,50 @@
+[
+  {
+    "jogo": "minecraft",
+    "arquivo": "minecraft.jpg",
+    "pagina": "https://www.minecraft.net/en-us/article/key-art-update",
+    "imagem": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NewKeyArt_Header.jpg"
+  },
+  {
+    "jogo": "fortnite",
+    "arquivo": "fortnite.jpg",
+    "pagina": "https://store.epicgames.com/en-US/p/fortnite",
+    "imagem": "https://cdn1.epicgames.com/spt-assets/prod-fn/FNBR_42-30_Fortnitemares_KeyArt_Fortnitemares_EGS_Launcher_Blade_2560x1440-66c1t.jpg?h=540&quality=medium&resize=1&w=960"
+  },
+  {
+    "jogo": "valorant",
+    "arquivo": "valorant.jpg",
+    "pagina": "https://playvalorant.com/en-us/media/",
+    "imagem": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/1371084d631d25722a1e4b8d5df41d2ac6a70443.zip"
+  },
+  {
+    "jogo": "stardew-valley",
+    "arquivo": "stardew-valley.jpg",
+    "pagina": "https://store.steampowered.com/app/413150/",
+    "imagem": "https://cdn.akamai.steamstatic.com/steam/apps/413150/header.jpg"
+  },
+  {
+    "jogo": "rocket-league",
+    "arquivo": "rocket-league.jpg",
+    "pagina": "https://store.steampowered.com/app/252950/",
+    "imagem": "https://cdn.akamai.steamstatic.com/steam/apps/252950/header.jpg"
+  },
+  {
+    "jogo": "age-of-empires-ii",
+    "arquivo": "age-of-empires-ii.jpg",
+    "pagina": "https://store.steampowered.com/app/813780/",
+    "imagem": "https://cdn.akamai.steamstatic.com/steam/apps/813780/header.jpg"
+  },
+  {
+    "jogo": "hollow-knight",
+    "arquivo": "hollow-knight.jpg",
+    "pagina": "https://store.steampowered.com/app/367520/",
+    "imagem": "https://cdn.akamai.steamstatic.com/steam/apps/367520/header.jpg"
+  },
+  {
+    "jogo": "the-witcher-3",
+    "arquivo": "the-witcher-3.jpg",
+    "pagina": "https://store.steampowered.com/app/292030/",
+    "imagem": "https://cdn.akamai.steamstatic.com/steam/apps/292030/header.jpg"
+  }
+]

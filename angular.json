@@ -1,0 +1,36 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "projects": {
+    "gamehub": {
+      "projectType": "application", "root": "", "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "src/main.ts", "tsConfig": "tsconfig.app.json",
+            "index": "src/index.html", "styles": ["src/styles.css"],
+            "assets": [{ "glob": "**/*", "input": "public" }],
+            "outputPath": "dist/gamehub"
+          },
+          "configurations": {
+            "production": { "outputHashing": "all", "budgets": [{ "type": "initial", "maximumWarning": "700kB", "maximumError": "1MB" }] },
+            "development": { "optimization": false, "sourceMap": true }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "development": { "buildTarget": "gamehub:build:development" },
+            "production": { "buildTarget": "gamehub:build:production" }
+          },
+          "defaultConfiguration": "development"
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "06a9741a-558a-43c6-9a8e-0018ad734d55"
+  }
+}

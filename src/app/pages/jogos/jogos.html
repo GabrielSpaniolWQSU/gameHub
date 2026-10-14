@@ -1,0 +1,10 @@
+<h1>Catálogo de jogos</h1>
+<div class="filtros">
+  <label>Buscar pelo nome<input type="search" [(ngModel)]="busca" placeholder="Digite o nome do jogo"></label>
+  <label>Categoria<select [(ngModel)]="categoria"><option value="">Todas</option>@for (item of service.categorias; track item) { <option [value]="item">{{ item }}</option> }</select></label>
+  <button class="secundario" (click)="limpar()">Limpar filtros</button>
+</div>
+<p aria-live="polite">{{ jogosFiltrados.length }} jogo(s) encontrado(s)</p>
+@if (jogosFiltrados.length > 0) {
+  <div class="grade">@for (jogo of jogosFiltrados; track jogo.id) { <app-jogo-card [jogo]="jogo" /> }</div>
+} @else { <p class="aviso">Nenhum jogo encontrado. Tente outro nome ou categoria.</p> }
